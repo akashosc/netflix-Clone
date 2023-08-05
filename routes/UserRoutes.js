@@ -2,7 +2,7 @@ const {
     addToLikedMovies,
     getLikedMovies,
     removeFromLikedMovies,
-  } = require("../netflix-api/controllers/UserController");
+  } = require("../controllers/UserController");
   
   const router = require("express").Router();
   
