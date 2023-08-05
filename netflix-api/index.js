@@ -13,7 +13,7 @@ const MONGO_URL=process.env.MONGO_CONNECT;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname,'./netflix-ui/build')));
+app.use(express.static(path.join(__dirname,'../netflix-ui/build')));
 
 mongoose
   .connect(MONGO_URL, {
@@ -28,7 +28,7 @@ mongoose
   });
 
   app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'./netflix-ui/build/index.html'));
+    res.sendFile(path.join(__dirname,'../netflix-ui/build/index.html'));
   })
 
 app.use("/api/user", userRoutes);
